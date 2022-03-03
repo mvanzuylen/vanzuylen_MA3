@@ -1,0 +1,44 @@
+.item1 { 
+    grid-area: header; 
+}
+.item2 { 
+    grid-area: side-left; 
+}
+.item3 { 
+    grid-area: main; 
+}
+.item4 { 
+    grid-area: side-right; 
+}
+.item5 { 
+    grid-area: footer; 
+}
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'header header header'
+        'side-left main side-right'
+        'footer footer footer';
+    grid-template-rows: 1fr 4fr 1fr;
+    grid-template-columns: 1fr 4fr 1fr;
+    height: 100vh;
+    grid-gap: 10px;
+    background-color: cyan;
+}
+.grid-content-format{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: turquoise;
+}
+.box {
+    background-color: darkblue;
+    height: 60px;
+    width: 60px;
+    transition: width .5s, height .5s, background-color .5s;
+}
+.box:hover {
+    background-color: mediumseagreen;
+    height: 120px;
+    width: 120px;
+}
